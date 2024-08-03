@@ -1,0 +1,810 @@
+{
+    "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Resources/deployments/Microsoft.Template-20230825010010",
+    "location": null,
+    "name": "Microsoft.Template-20230825010010",
+    "properties": {
+      "correlationId": "13ac590a-b86e-4216-88e8-39624d11ebd7",
+      "debugSetting": {
+        "detailLevel": "None"
+      },
+      "dependencies": [
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Storage/storageAccounts/stl6e3afs3cgroq/fileServices/default",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "stl6e3afs3cgroq/default",
+              "resourceType": "Microsoft.Storage/storageAccounts/fileServices"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Storage/storageAccounts/stl6e3afs3cgroq/fileServices/default/shares/aciqdrantshare",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "stl6e3afs3cgroq/default/aciqdrantshare",
+          "resourceType": "Microsoft.Storage/storageAccounts/fileServices/shares"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Storage/storageAccounts/stl6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "stl6e3afs3cgroq",
+              "resourceType": "Microsoft.Storage/storageAccounts"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Storage/storageAccounts/stl6e3afs3cgroq/fileServices/default",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "stl6e3afs3cgroq/default",
+          "resourceType": "Microsoft.Storage/storageAccounts/fileServices"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/serverfarms/asp-copichat-l6e3afs3cgroq-webapi",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "asp-copichat-l6e3afs3cgroq-webapi",
+              "resourceType": "Microsoft.Web/serverfarms"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Network/virtualNetworks/vnet-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "vnet-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.Network/virtualNetworks"
+            },
+            {
+              "apiVersion": "2021-05-01",
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Network/virtualNetworks/vnet-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "vnet-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.Network/virtualNetworks"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-webapi",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "app-copichat-l6e3afs3cgroq-webapi",
+          "resourceType": "Microsoft.Web/sites"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Insights/components/appins-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "appins-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.Insights/components"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-qdrant",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "app-copichat-l6e3afs3cgroq-qdrant",
+              "resourceType": "Microsoft.Web/sites"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-webapi",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "app-copichat-l6e3afs3cgroq-webapi",
+              "resourceType": "Microsoft.Web/sites"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "cosmos-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.DocumentDB/databaseAccounts"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.CognitiveServices/accounts/cog-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "cog-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.CognitiveServices/accounts"
+            },
+            {
+              "actionName": "listConnectionStrings",
+              "apiVersion": "2023-04-15",
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "cosmos-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.DocumentDB/databaseAccounts"
+            },
+            {
+              "apiVersion": "2022-09-01",
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-qdrant",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "app-copichat-l6e3afs3cgroq-qdrant",
+              "resourceType": "Microsoft.Web/sites"
+            },
+            {
+              "actionName": "listKeys",
+              "apiVersion": "2022-12-01",
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.CognitiveServices/accounts/cog-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "cog-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.CognitiveServices/accounts"
+            },
+            {
+              "apiVersion": "2020-02-02",
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Insights/components/appins-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "appins-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.Insights/components"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-webapi/config/web",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "app-copichat-l6e3afs3cgroq-webapi/web",
+          "resourceType": "Microsoft.Web/sites/config"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-webapi",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "app-copichat-l6e3afs3cgroq-webapi",
+              "resourceType": "Microsoft.Web/sites"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-webapi/config/web",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "app-copichat-l6e3afs3cgroq-webapi/web",
+              "resourceType": "Microsoft.Web/sites/config"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-webapi/extensions/MSDeploy",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "app-copichat-l6e3afs3cgroq-webapi/MSDeploy",
+          "resourceType": "Microsoft.Web/sites/extensions"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.OperationalInsights/workspaces/la-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "la-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.OperationalInsights/workspaces"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Insights/components/appins-copichat-l6e3afs3cgroq",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "appins-copichat-l6e3afs3cgroq",
+          "resourceType": "Microsoft.Insights/components"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-webapi",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "app-copichat-l6e3afs3cgroq-webapi",
+              "resourceType": "Microsoft.Web/sites"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-webapi/config/web",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "app-copichat-l6e3afs3cgroq-webapi/web",
+              "resourceType": "Microsoft.Web/sites/config"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-webapi/siteextensions/Microsoft.ApplicationInsights.AzureWebSites",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "app-copichat-l6e3afs3cgroq-webapi/Microsoft.ApplicationInsights.AzureWebSites",
+          "resourceType": "Microsoft.Web/sites/siteextensions"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/serverfarms/asp-copichat-l6e3afs3cgroq-qdrant",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "asp-copichat-l6e3afs3cgroq-qdrant",
+              "resourceType": "Microsoft.Web/serverfarms"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Storage/storageAccounts/stl6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "stl6e3afs3cgroq",
+              "resourceType": "Microsoft.Storage/storageAccounts"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Network/virtualNetworks/vnet-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "vnet-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.Network/virtualNetworks"
+            },
+            {
+              "apiVersion": "2021-05-01",
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Network/virtualNetworks/vnet-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "vnet-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.Network/virtualNetworks"
+            },
+            {
+              "actionName": "listKeys",
+              "apiVersion": "2022-09-01",
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Storage/storageAccounts/stl6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "stl6e3afs3cgroq",
+              "resourceType": "Microsoft.Storage/storageAccounts"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-qdrant",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "app-copichat-l6e3afs3cgroq-qdrant",
+          "resourceType": "Microsoft.Web/sites"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Network/networkSecurityGroups/nsg-copichat-l6e3afs3cgroq-qdrant",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "nsg-copichat-l6e3afs3cgroq-qdrant",
+              "resourceType": "Microsoft.Network/networkSecurityGroups"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Network/networkSecurityGroups/nsg-copichat-l6e3afs3cgroq-webapi",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "nsg-copichat-l6e3afs3cgroq-webapi",
+              "resourceType": "Microsoft.Network/networkSecurityGroups"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Network/virtualNetworks/vnet-copichat-l6e3afs3cgroq",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "vnet-copichat-l6e3afs3cgroq",
+          "resourceType": "Microsoft.Network/virtualNetworks"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-webapi",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "app-copichat-l6e3afs3cgroq-webapi",
+              "resourceType": "Microsoft.Web/sites"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Network/virtualNetworks/vnet-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "vnet-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.Network/virtualNetworks"
+            },
+            {
+              "apiVersion": "2021-05-01",
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Network/virtualNetworks/vnet-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "vnet-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.Network/virtualNetworks"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-webapi/virtualNetworkConnections/webSubnetConnection",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "app-copichat-l6e3afs3cgroq-webapi/webSubnetConnection",
+          "resourceType": "Microsoft.Web/sites/virtualNetworkConnections"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-qdrant",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "app-copichat-l6e3afs3cgroq-qdrant",
+              "resourceType": "Microsoft.Web/sites"
+            },
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Network/virtualNetworks/vnet-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "vnet-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.Network/virtualNetworks"
+            },
+            {
+              "apiVersion": "2021-05-01",
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Network/virtualNetworks/vnet-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "vnet-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.Network/virtualNetworks"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Web/sites/app-copichat-l6e3afs3cgroq-qdrant/virtualNetworkConnections/qdrantSubnetConnection",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "app-copichat-l6e3afs3cgroq-qdrant/qdrantSubnetConnection",
+          "resourceType": "Microsoft.Web/sites/virtualNetworkConnections"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "cosmos-copichat-l6e3afs3cgroq",
+              "resourceType": "Microsoft.DocumentDB/databaseAccounts"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq/sqlDatabases/CopilotChat",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "cosmos-copichat-l6e3afs3cgroq/CopilotChat",
+          "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq/sqlDatabases/CopilotChat",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "cosmos-copichat-l6e3afs3cgroq/CopilotChat",
+              "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq/sqlDatabases/CopilotChat/containers/chatmessages",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "cosmos-copichat-l6e3afs3cgroq/CopilotChat/chatmessages",
+          "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq/sqlDatabases/CopilotChat",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "cosmos-copichat-l6e3afs3cgroq/CopilotChat",
+              "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq/sqlDatabases/CopilotChat/containers/chatsessions",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "cosmos-copichat-l6e3afs3cgroq/CopilotChat/chatsessions",
+          "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq/sqlDatabases/CopilotChat",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "cosmos-copichat-l6e3afs3cgroq/CopilotChat",
+              "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq/sqlDatabases/CopilotChat/containers/chatparticipants",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "cosmos-copichat-l6e3afs3cgroq/CopilotChat/chatparticipants",
+          "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq/sqlDatabases/CopilotChat",
+              "resourceGroup": "ps-azure-openai-deployments",
+              "resourceName": "cosmos-copichat-l6e3afs3cgroq/CopilotChat",
+              "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases"
+            }
+          ],
+          "id": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-copichat-l6e3afs3cgroq/sqlDatabases/CopilotChat/containers/chatmemorysources",
+          "resourceGroup": "ps-azure-openai-deployments",
+          "resourceName": "cosmos-copichat-l6e3afs3cgroq/CopilotChat/chatmemorysources",
+          "resourceType": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers"
+        }
+      ],
+      "duration": "PT1M13.1752938S",
+      "error": {
+        "additionalInfo": null,
+        "code": "DeploymentFailed",
+        "details": [
+          {
+            "additionalInfo": null,
+            "code": "MissingSubscriptionRegistration",
+            "details": null,
+            "message": "The subscription is not registered to use namespace 'Microsoft.DocumentDB'. See https://aka.ms/rps-not-found for how to register subscriptions.",
+            "target": null
+          }
+        ],
+        "message": "At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/arm-deployment-operations for usage details.",
+        "target": "/subscriptions/f9d43e89-e8d6-45e5-959e-c3f3e37b0d13/resourceGroups/ps-azure-openai-deployments/providers/Microsoft.Resources/deployments/Microsoft.Template-20230825010010"
+      },
+      "mode": "Incremental",
+      "onErrorDeployment": null,
+      "outputResources": null,
+      "outputs": null,
+      "parameters": {
+        "aiApiKey": {
+          "type": "SecureString"
+        },
+        "aiEndpoint": {
+          "type": "String",
+          "value": "https://ps-copilot.openai.azure.com/"
+        },
+        "aiService": {
+          "type": "String",
+          "value": "AzureOpenAI"
+        },
+        "azureAdInstance": {
+          "type": "String",
+          "value": "https://login.microsoftonline.com"
+        },
+        "azureAdTenantId": {
+          "type": "String",
+          "value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        },
+        "completionModel": {
+          "type": "String",
+          "value": "gpt-35-turbo"
+        },
+        "deployCosmosDB": {
+          "type": "Bool",
+          "value": true
+        },
+        "deployNewAzureOpenAI": {
+          "type": "Bool",
+          "value": false
+        },
+        "deploySpeechServices": {
+          "type": "Bool",
+          "value": true
+        },
+        "deployWebApiPackage": {
+          "type": "Bool",
+          "value": true
+        },
+        "embeddingModel": {
+          "type": "String",
+          "value": "text-embedding-ada-002"
+        },
+        "location": {
+          "type": "String",
+          "value": "eastus"
+        },
+        "memoryStore": {
+          "type": "String",
+          "value": "Qdrant"
+        },
+        "name": {
+          "type": "String",
+          "value": "copichat"
+        },
+        "packageUri": {
+          "type": "String",
+          "value": "https://aka.ms/copilotchat/webapi/latest"
+        },
+        "plannerModel": {
+          "type": "String",
+          "value": "gpt-35-turbo"
+        },
+        "sqlAdminPassword": {
+          "type": "SecureString"
+        },
+        "webApiClientId": {
+          "type": "String",
+          "value": "6a09384b-16cb-4634-a1ac-770aafc15e34"
+        },
+        "webAppServiceSku": {
+          "type": "String",
+          "value": "B1"
+        },
+        "webappLocation": {
+          "type": "String",
+          "value": "westus2"
+        }
+      },
+      "parametersLink": null,
+      "providers": [
+        {
+          "id": null,
+          "namespace": "Microsoft.Storage",
+          "providerAuthorizationConsentState": null,
+          "registrationPolicy": null,
+          "registrationState": null,
+          "resourceTypes": [
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                null
+              ],
+              "properties": null,
+              "resourceType": "storageAccounts/fileServices/shares",
+              "zoneMappings": null
+            },
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                null
+              ],
+              "properties": null,
+              "resourceType": "storageAccounts/fileServices",
+              "zoneMappings": null
+            },
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                "eastus"
+              ],
+              "properties": null,
+              "resourceType": "storageAccounts",
+              "zoneMappings": null
+            }
+          ]
+        },
+        {
+          "id": null,
+          "namespace": "Microsoft.Web",
+          "providerAuthorizationConsentState": null,
+          "registrationPolicy": null,
+          "registrationState": null,
+          "resourceTypes": [
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                "eastus"
+              ],
+              "properties": null,
+              "resourceType": "serverfarms",
+              "zoneMappings": null
+            },
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                "eastus"
+              ],
+              "properties": null,
+              "resourceType": "sites",
+              "zoneMappings": null
+            },
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                null
+              ],
+              "properties": null,
+              "resourceType": "sites/config",
+              "zoneMappings": null
+            },
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                null
+              ],
+              "properties": null,
+              "resourceType": "sites/extensions",
+              "zoneMappings": null
+            },
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                null
+              ],
+              "properties": null,
+              "resourceType": "sites/siteextensions",
+              "zoneMappings": null
+            },
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                null
+              ],
+              "properties": null,
+              "resourceType": "sites/virtualNetworkConnections",
+              "zoneMappings": null
+            },
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                "westus2"
+              ],
+              "properties": null,
+              "resourceType": "staticSites",
+              "zoneMappings": null
+            }
+          ]
+        },
+        {
+          "id": null,
+          "namespace": "Microsoft.Insights",
+          "providerAuthorizationConsentState": null,
+          "registrationPolicy": null,
+          "registrationState": null,
+          "resourceTypes": [
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                "eastus"
+              ],
+              "properties": null,
+              "resourceType": "components",
+              "zoneMappings": null
+            }
+          ]
+        },
+        {
+          "id": null,
+          "namespace": "Microsoft.OperationalInsights",
+          "providerAuthorizationConsentState": null,
+          "registrationPolicy": null,
+          "registrationState": null,
+          "resourceTypes": [
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                "eastus"
+              ],
+              "properties": null,
+              "resourceType": "workspaces",
+              "zoneMappings": null
+            }
+          ]
+        },
+        {
+          "id": null,
+          "namespace": "Microsoft.Network",
+          "providerAuthorizationConsentState": null,
+          "registrationPolicy": null,
+          "registrationState": null,
+          "resourceTypes": [
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                "eastus"
+              ],
+              "properties": null,
+              "resourceType": "virtualNetworks",
+              "zoneMappings": null
+            },
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                "eastus"
+              ],
+              "properties": null,
+              "resourceType": "networkSecurityGroups",
+              "zoneMappings": null
+            }
+          ]
+        },
+        {
+          "id": null,
+          "namespace": "Microsoft.DocumentDB",
+          "providerAuthorizationConsentState": null,
+          "registrationPolicy": null,
+          "registrationState": null,
+          "resourceTypes": [
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                "eastus"
+              ],
+              "properties": null,
+              "resourceType": "databaseAccounts",
+              "zoneMappings": null
+            },
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                null
+              ],
+              "properties": null,
+              "resourceType": "databaseAccounts/sqlDatabases",
+              "zoneMappings": null
+            },
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                null
+              ],
+              "properties": null,
+              "resourceType": "databaseAccounts/sqlDatabases/containers",
+              "zoneMappings": null
+            }
+          ]
+        },
+        {
+          "id": null,
+          "namespace": "Microsoft.CognitiveServices",
+          "providerAuthorizationConsentState": null,
+          "registrationPolicy": null,
+          "registrationState": null,
+          "resourceTypes": [
+            {
+              "aliases": null,
+              "apiProfiles": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "defaultApiVersion": null,
+              "locationMappings": null,
+              "locations": [
+                "eastus"
+              ],
+              "properties": null,
+              "resourceType": "accounts",
+              "zoneMappings": null
+            }
+          ]
+        }
+      ],
+      "provisioningState": "Failed",
+      "templateHash": "3732675964346678923",
+      "templateLink": {
+        "contentVersion": "1.0.0.0",
+        "id": null,
+        "queryString": null,
+        "relativePath": null,
+        "uri": "https://raw.githubusercontent.com/microsoft/chat-copilot/main/scripts/deploy/main.json"
+      },
+      "timestamp": "2023-08-25T08:01:31.070577+00:00",
+      "validatedResources": null,
+      "validationLevel": "Template"
+    },
+    "resourceGroup": "ps-azure-openai-deployments",
+    "tags": {
+      "marketplaceItemId": "Microsoft.Template"
+    },
+    "type": "Microsoft.Resources/deployments"
+  }
